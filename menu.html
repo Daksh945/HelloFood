@@ -1,0 +1,167 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Menu | Hello Food Mansa</title><meta name="description" content="Full Hello Food Mansa food menu with item descriptions and prices."><style>
+:root{--red:#d92e27;--ink:#201c1a;--cream:#fffaf2;--gold:#f5b544;--muted:#716a64;--line:#eee4d8}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial,sans-serif}
+button,input,select{font:inherit}button,a{cursor:pointer}.top{background:#171413;color:#fff;padding:10px 5vw;display:flex;justify-content:space-between;gap:12px;font-size:12px;letter-spacing:.04em}
+header{position:sticky;top:0;z-index:10;background:#fffdf9ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding:14px 5vw;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:950;font-size:23px;letter-spacing:-1px}.logo{width:42px;height:42px;border-radius:14px;background:var(--red);color:white;display:grid;place-items:center;font-size:22px}
+nav{display:flex;gap:24px;align-items:center}nav a{color:var(--ink);text-decoration:none;font-size:14px;font-weight:700}nav a:hover{color:var(--red)}
+.cartbtn,.primary{background:var(--red);color:#fff;border:0;border-radius:999px;padding:12px 18px;font-weight:800;box-shadow:0 8px 18px #d92e2726}.cartbtn span{background:white;color:var(--red);border-radius:50%;padding:2px 7px;margin-left:5px}
+.hero{padding:76px 5vw 66px;background:radial-gradient(circle at 80% 30%,#ffcf7b 0,transparent 25%),linear-gradient(120deg,#211a17,#3b211b);color:#fff;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;overflow:hidden}
+.kicker{color:#ffd27d;font-weight:900;letter-spacing:.16em;text-transform:uppercase;font-size:12px}.hero h1{font-size:clamp(44px,7vw,82px);line-height:.98;letter-spacing:-.06em;margin:14px 0}.hero h1 em{color:#ffcb68;font-style:normal}.hero p{max-width:560px;color:#eadbd2;line-height:1.7;font-size:17px}.heroactions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.secondary{border:1px solid #ffffff75;background:transparent;color:white;border-radius:999px;padding:12px 18px;font-weight:800;text-decoration:none}
+.food-art{min-height:330px;display:grid;place-items:center;position:relative}.food-circle{width:min(340px,75vw);aspect-ratio:1;border-radius:50%;background:linear-gradient(145deg,#ffcf72,#e76b31);display:grid;place-items:center;box-shadow:0 24px 80px #0007;border:10px solid #fff3}.food-circle .emoji{font-size:clamp(130px,20vw,220px);filter:drop-shadow(0 14px 8px #642b2580)}.floating{position:absolute;background:#fff;color:var(--ink);padding:13px 17px;border-radius:16px;font-weight:900;box-shadow:0 12px 28px #0003}.f1{top:10%;left:0}.f2{bottom:9%;right:0}
+.strip{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-bottom:1px solid var(--line)}.strip div{background:#fff;padding:20px;text-align:center;font-weight:800}.strip small{display:block;color:var(--muted);font-weight:500;margin-top:4px}
+section{padding:68px 5vw}.sectionhead{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:26px}.eyebrow{color:var(--red);font-size:12px;font-weight:900;letter-spacing:.16em;text-transform:uppercase}.sectionhead h2{font-size:clamp(30px,4vw,48px);letter-spacing:-.045em;margin:7px 0 0}.sectionhead p{color:var(--muted);max-width:480px;line-height:1.6;margin:0}
+
+.menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.item{background:white;border:1px solid var(--line);border-radius:20px;padding:18px;display:flex;flex-direction:column;min-height:218px;box-shadow:0 8px 25px #4b2b1408}.itemtop{display:flex;justify-content:space-between;gap:12px;align-items:start}.item h3{margin:0;font-size:17px}.category{font-size:10px;color:var(--red);font-weight:900;text-transform:uppercase;letter-spacing:.12em}.desc{color:var(--muted);font-size:13px;line-height:1.55;margin:10px 0 16px;flex:1}.price{font-weight:950;font-size:19px;white-space:nowrap}.price small{font-size:11px;color:var(--muted);font-weight:600}.buyrow{display:flex;gap:9px;align-items:center}.buyrow select{flex:1;min-width:0;border:1px solid var(--line);border-radius:10px;padding:9px;background:#fff}.add{background:var(--ink);color:#fff;border:0;border-radius:10px;padding:10px 13px;font-weight:850}.add:hover{background:var(--red)}
+.note{background:#fff2d8;border:1px solid #f5dfb3;border-radius:14px;padding:14px 16px;color:#705021;font-size:13px;line-height:1.55;margin-top:20px}
+.about{background:#f5eee4;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}.aboutbox{background:#fff;border-radius:24px;padding:30px}.aboutbox .big{font-size:68px}.about h2{font-size:clamp(32px,4vw,48px);letter-spacing:-.04em;margin:8px 0}.about p{color:var(--muted);line-height:1.75}
+.contactgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.contactcard{padding:22px;border-radius:18px;background:white;border:1px solid var(--line)}.contactcard b{display:block;margin:9px 0}.contactcard p{margin:0;color:var(--muted);line-height:1.6;font-size:14px}.contactcard a{color:var(--red);font-weight:800;text-decoration:none;overflow-wrap:anywhere}
+footer{background:#1d1917;color:#fff;padding:28px 5vw;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}footer small{color:#c9bdb5}
+.cartpanel{position:fixed;inset:0;z-index:30;display:none;background:#0007;justify-content:flex-end}.cartpanel.open{display:flex}.drawer{width:min(440px,100%);height:100%;background:#fffdf9;padding:22px;overflow:auto;box-shadow:-20px 0 60px #0003}.drawhead{display:flex;justify-content:space-between;align-items:center}.drawhead h2{margin:0}.close{border:0;background:#f1e9e1;border-radius:50%;width:38px;height:38px;font-size:20px}.cartline{padding:15px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:1fr auto;gap:8px}.cartline small{display:block;color:var(--muted);margin-top:4px}.qty{display:flex;gap:8px;align-items:center}.qty button{border:1px solid var(--line);background:white;border-radius:8px;width:28px;height:28px;font-weight:900}.total{display:flex;justify-content:space-between;font-size:20px;font-weight:950;padding:20px 0}.checkout{width:100%;border:0;background:#16864a;color:white;border-radius:12px;padding:15px;font-weight:900}.empty{color:var(--muted);text-align:center;padding:55px 10px}
+@media(max-width:850px){.hero{grid-template-columns:1fr}.food-art{min-height:260px}.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about{grid-template-columns:1fr}nav{gap:12px}nav a{font-size:12px}}
+@media(max-width:580px){.top{font-size:10px}header{padding:12px 4vw}.brand{font-size:19px}.logo{width:36px;height:36px}nav a{display:none}.hero{padding:55px 5vw 35px}.hero p{font-size:15px}.strip div{padding:14px 6px;font-size:12px}.strip small{font-size:10px}section{padding:52px 5vw}.sectionhead{display:block}.sectionhead p{margin-top:10px}.menu-grid{grid-template-columns:1fr}.contactgrid{grid-template-columns:1fr}.food-art{min-height:220px}.floating{font-size:12px;padding:10px 12px}}
+
+.menu-page-hero{padding:55px 5vw;background:linear-gradient(120deg,#211a17,#48241e);color:white}
+.menu-page-hero h1{font-size:clamp(38px,6vw,64px);margin:8px 0;letter-spacing:-.05em}
+.menu-category{padding:48px 5vw 12px;scroll-margin-top:90px}
+.menu-category h2{font-size:30px;margin:0 0 18px;letter-spacing:-.04em}
+.menu-category h2 span{color:var(--red)}
+.menu-grid{padding:0 5vw 24px}
+.item{min-height:205px}
+.no-price{color:#9a5a17;font-size:12px;font-weight:800}
+.menu-nav{display:flex;gap:8px;flex-wrap:wrap;padding:18px 5vw;background:#fff;border-bottom:1px solid var(--line)}
+.menu-nav a{background:#f6eee5;color:var(--ink);text-decoration:none;padding:9px 13px;border-radius:999px;font-size:12px;font-weight:800}
+.menu-nav a:hover{background:var(--red);color:#fff}
+@media(max-width:580px){.menu-category{padding:34px 5vw 8px}.menu-category h2{font-size:25px}}
+</style></head><body><div class="top"><span>📍 MANSA, PUNJAB</span><span>GOOD FOOD. GOOD MOOD. ALWAYS.</span></div>
+<header><a class="brand" href="index.html"><span class="logo">🍕</span> HELLO FOOD</a><nav><a href="index.html">Home</a><a href="menu.html">Menu</a><a href="index.html#contact">Contact</a></nav><button class="cartbtn" onclick="toggleCart(true)">Your cart <span id="cartCount">0</span></button></header>
+<div class="menu-page-hero"><div class="eyebrow">Made for your cravings</div><h1>Our full menu.</h1><p>Every bite, sip and snack — browse the dishes below and add your favourites to your cart.</p></div>
+<div class="menu-nav" id="menuNav"></div><main id="menuSections"></main>
+<div class="note" style="margin:20px 5vw 50px">Menu details and prices are transcribed from the menu photo provided. Some items have MRP or no separate price printed and are shown as price confirmation required. Pizza group prices are applied as shown in the printed menu. Please confirm availability and final bill with the restaurant.</div>
+<footer><div><b>🍕 HELLO FOOD · MANSA</b><br><small>Good food. Good mood.</small></div><small><a href="index.html" style="color:#ffd27d">Back to homepage</a></small></footer><div class="cartpanel" id="cartPanel" onclick="if(event.target===this)toggleCart(false)"><div class="drawer"><div class="drawhead"><h2>Your order 🛒</h2><button class="close" onclick="toggleCart(false)">×</button></div><div id="cartItems"></div><div class="total"><span>Total</span><span id="cartTotal">₹0</span></div><button class="checkout" onclick="checkout()">Place order on WhatsApp ↗</button><p style="font-size:12px;color:var(--muted);line-height:1.5">Your order will be sent as a WhatsApp message for the restaurant to confirm. This demo does not take online payments.</p></div></div>
+<script>
+[
+["Margherita Pizza","Pizza", "Classic single-cheese pizza with a simple, cheesy topping.",{Small:100,Medium:210,Large:300}],
+["Cheese Tomato Pizza","Pizza","Cheese and fresh tomato on a pizza base.",{Small:130,Medium:260,Large:360}],
+["Cheese Corn Pizza","Pizza","Cheese with sweet corn for a mild, sweet-and-savoury bite.",{Small:130,Medium:260,Large:360}],
+["Cheese Capsicum Pizza","Pizza","Cheese and fresh capsicum for a crisp, savoury topping.",{Small:130,Medium:260,Large:360}],
+["Cheese & Mushroom Pizza","Pizza","Cheese paired with mushroom pieces.",{Small:130,Medium:260,Large:360}],
+["Green Pizza","Pizza","Onion, capsicum and tomato.",{Small:170,Medium:320,Large:460}],
+["Fresh House Pizza","Pizza","Onion, capsicum, tomato and mushroom.",{Small:170,Medium:320,Large:460}],
+["Chilly Paneer Pizza","Pizza","Capsicum, red paprika and paneer.",{Small:170,Medium:320,Large:460}],
+["Golden Pizza","Pizza","Pineapple, corn and gherkin.",{Small:170,Medium:320,Large:460}],
+["Deluxe Pizza","Pizza","Onion, capsicum, mushroom, corn and paneer.",{Small:200,Medium:370,Large:540}],
+["Mexicana Pizza","Pizza","Onion, capsicum, mushroom, jalapeño and black olives.",{Small:200,Medium:370,Large:540}],
+["Gourmet Pizza","Pizza","Jalapeño, black olives, corn, gherkin and extra cheese.",{Small:200,Medium:370,Large:540}],
+["Spicy Pizza","Pizza","Jalapeño, paneer, red paprika, green chilli and spicy sauce.",{Small:200,Medium:370,Large:540}],
+["Tandoori Paneer Pizza","Pizza","Onion, capsicum, red paprika, paneer and tandoori sauce.",{Small:200,Medium:370,Large:540}],
+["Multi Veg Pizza","Pizza","Onion, capsicum, tomato, mushroom, corn, black olives, jalapeño and extra cheese.",{Small:230,Medium:460,Large:640}],
+["Soya Single Topping Pizza","Pizza Mania","Single topping: soya.",{Regular:59}],
+["Onion Single Topping Pizza","Pizza Mania","Single topping: onion.",{Regular:70}],
+["Capsicum Single Topping Pizza","Pizza Mania","Single topping: capsicum.",{Regular:80}],
+["Corn Single Topping Pizza","Pizza Mania","Single topping: corn.",{Regular:85}],
+["Pineapple Single Topping Pizza","Pizza Mania","Single topping: pineapple.",{Regular:80}],
+["Onion & Jalapeño Pizza","Pizza Mania","Double topping: onion and jalapeño.",{Regular:90}],
+["Onion & Capsicum Pizza","Pizza Mania","Double topping: onion and capsicum.",{Regular:90}],
+["Soya & Corn Pizza","Pizza Mania","Double topping: soya and corn.",{Regular:90}],
+["Paneer & Onion Pizza","Pizza Mania","Double topping: paneer and onion.",{Regular:100}],
+["Jalapeño & Pineapple Pizza","Pizza Mania","Double topping: jalapeño and pineapple.",{Regular:100}],
+["Capsicum, Corn & Jalapeño Yummy Pizza","Pizza Mania","A three-topping combination of capsicum, corn and jalapeño.",{Small:130,Medium:230}],
+["Onion, Capsicum & Paneer Yummy Pizza","Pizza Mania","A three-topping combination of onion, capsicum and paneer.",{Small:140,Medium:250}],
+["Strawberry Shake","Shakes","A chilled strawberry-flavoured milkshake.",{Regular:90}],
+["Blueberry Shake","Shakes","A chilled blueberry-flavoured milkshake.",{Regular:90}],
+["Chocolate Shake","Shakes","A creamy chocolate-flavoured milkshake.",{Regular:90}],
+["Butterscotch Shake","Shakes","A sweet butterscotch-flavoured milkshake.",{Regular:100}],
+["Black Currant Shake","Shakes","A black-currant-flavoured milkshake.",{Regular:100}],
+["Chocolate Oreo Shake","Shakes","Chocolate shake blended with Oreo cookies.",{Regular:100}],
+["Kit-Kat Shake","Shakes","A chocolatey shake with Kit-Kat flavour.",{Regular:100}],
+["Popcorn Caramel Shake","Shakes","A caramel-flavoured shake with popcorn-inspired flavour.",{Regular:130}],
+["Mint Mojito","Mocktails","A refreshing mint-and-citrus style cooler.",{Regular:80}],
+["Green Apple Mocktail","Mocktails","A cool green-apple-flavoured drink.",{Regular:80}],
+["Blue Lagoon","Mocktails","A bright, refreshing blue mocktail.",{Regular:80}],
+["Watermelon Mocktail","Mocktails","A refreshing watermelon-flavoured cooler.",{Regular:80}],
+["Coke (300 ml glass)","Drinks","Coca-Cola served in a 300 ml glass.",{Regular:35}],
+["Sprite (300 ml glass)","Drinks","Sprite served in a 300 ml glass.",{Regular:35}],
+["Fresh Lemon","Drinks","A fresh lemon drink.",{Regular:50}],
+["Mineral Water","Drinks","Bottled mineral water. Price is MRP as printed on the menu.",null],
+["Fruit Beer","Drinks","Fruit beer; price is MRP as printed on the menu.",null],
+["Coke & Sprite Can","Drinks","Canned Coke or Sprite; price is MRP as printed on the menu.",null],
+["Juice Can","Drinks","Canned juice; price is MRP as printed on the menu.",null],
+["Veg Roll","Rolls","A vegetable-filled roll.",{Regular:90}],
+["Hot Coffee (Cappuccino)","Coffee","Hot cappuccino-style coffee.",{Regular:60}],
+["Hot Coffee (Mochaccino)","Coffee","Hot mochaccino-style coffee.",{Regular:70}],
+["Cold Coffee","Coffee","Chilled coffee.",{Regular:100}],
+["Pan Cake","New Additions","A sweet pancake.",{Regular:50}],
+["Popcorn Fries","New Additions","Crispy fries with a popcorn-style shape or texture.",{Regular:70}],
+["Onion Ring","New Additions","Crispy onion rings.",{Regular:80}],
+["Hara Bhara Kabab","New Additions","A vegetarian green-vegetable and herb kebab.",{Regular:90}],
+["Veg Momos","New Additions","Vegetable-filled momos.",{Regular:90}],
+["Crunchy Momos","New Additions","Momos with a crunchy outer coating.",{Regular:100}],
+["Hakka Noodle","New Additions","Hakka-style noodles.",{Regular:100}],
+["V-Crispers","New Additions","A crispy vegetarian snack; exact preparation to confirm.",{Regular:100}],
+["Kabab Roll","New Additions","A kebab-style filling wrapped in a roll.",{Regular:120}],
+["Veg Multigrain Wrap","New Additions","A vegetable wrap made with a multigrain wrap.",{Regular:130}],
+["Veg Patty Taco","New Additions","A taco filled with a vegetarian patty.",{Regular:130}],
+["Aloo Tikki Burger","Burgers","A potato tikki burger.",{Regular:39}],
+["Veg Burger","Burgers","A classic vegetable burger.",{Regular:50}],
+["Cheesy Burger","Burgers","A burger with a cheesy filling.",{Regular:65}],
+["Delight Burger","Burgers","The menu's Delight-style burger.",{Regular:75}],
+["Cheesy & Spicy Burger","Burgers","A burger with cheesy and spicy flavours.",{Regular:75}],
+["Spicy Paneer Burger","Burgers","Paneer burger with a spicy flavour.",{Regular:100}],
+["Hello Special Burger","Burgers","The restaurant's special burger.",{Regular:110}],
+["Grilled Sandwich (2 pcs.)","Sandwiches","Two pieces of grilled sandwich.",{Regular:80}],
+["Cheesy Grill Sandwich (2 pcs.)","Sandwiches","Two pieces of grilled sandwich with cheese.",{Regular:90}],
+["Spicy Paneer Sandwich (2 pcs.)","Sandwiches","Two pieces of sandwich with spicy paneer.",{Regular:110}],
+["Red Pasta","Pasta","Pasta with a red-style sauce.",{Regular:100}],
+["White Pasta","Pasta","Pasta with a creamy white-style sauce.",{Regular:100}],
+["Jumbo Pasta","Pasta","A larger pasta serving.",{Regular:110}],
+["Makhani Pasta","Pasta","Pasta in a makhani-style sauce.",{Regular:110}],
+["Garlic Bread","Garlic Bread","Garlic-flavoured bread.",{Regular:100}],
+["Stuffed Garlic Bread","Garlic Bread","Garlic bread with a stuffed filling.",{Regular:130}],
+["French Fries","Fries","Classic crispy french fries.",{Regular:70}],
+["Peri Peri Fries","Fries","Fries tossed in peri-peri seasoning.",{Regular:80}],
+["Cheesy Fries","Fries","Fries topped with cheese.",{Regular:90}],
+["Cheesy & Saucy Wrap","Wraps","A wrap with cheese and sauce.",{Regular:100}],
+["Paneer Wrap","Wraps","A wrap filled with paneer.",{Regular:120}],
+["Veg Delight Salad","Salads","A vegetable salad.",{Regular:130}],
+["Paneer Salad","Salads","A salad with paneer.",{Regular:150}],
+["American Veg Salad","Salads","An American-style vegetarian salad.",{Regular:180}],
+["Lava Cake","Sides","A chocolate lava cake-style dessert.",{Regular:70}],
+["Cheesy Dip","Sides","Cheese dip for sides.",{Regular:30}],
+["Spicy Dip","Sides","Spicy dipping sauce.",{Regular:30}],
+["Green Dip","Sides","Green dipping sauce.",{Regular:30}],
+["Paneer Parcel","Sides","A paneer-filled snack parcel.",{Regular:60}],
+["Sweet Corn (Cup)","Sides","A cup of sweet corn.",{Regular:60}],
+["Extra Cheese","Pizza Upgrades","Add extra cheese to your pizza.",{Small:40,Medium:70,Large:90}],
+["Cheese Burst Base","Pizza Upgrades","Upgrade your pizza with a cheese-burst base.",{Small:60,Medium:90,Large:120}],
+["Yummy Flavours","Pizza Upgrades","Add a yummy flavour to your pizza.",{Small:20,Medium:30,Large:40}],
+["Makhani Flavours","Pizza Upgrades","Add a makhani-style flavour to your pizza.",{Small:20,Medium:30,Large:40}],
+["Spicy Flavours","Pizza Upgrades","Add a spicy flavour to your pizza.",{Small:20,Medium:30,Large:40}],
+["Extra Topping","Pizza Upgrades","Add an extra topping to your pizza.",{Small:20,Medium:30,Large:40}],
+["Jalapeño + Pineapple + Coke","Combos","A combo of jalapeño and pineapple with Coke.",{Regular:120}],
+["Spicy Paneer Burger + Coke","Combos","A spicy paneer burger served with Coke.",{Regular:120}],
+["Paneer Onion Pizza + Coke","Combos","A paneer and onion pizza combo with Coke.",{Regular:130}]
+];
+const categories=[...new Set(menu.map(x=>x[1]))];
+let cart=[];
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+function priceLabel(p){if(!p)return '<span class="no-price">MRP / confirm price</span>';let v=Object.values(p);return '₹'+Math.min(...v)+(v.length>1?'–₹'+Math.max(...v):'')}
+function renderMenu(){
+ const root=document.getElementById('menuSections');
+ root.innerHTML=categories.map(cat=>{
+  const items=menu.map((m,id)=>({m,id})).filter(x=>x.m[1]===cat);
+  const anchor=cat.toLowerCase().replace(/[^a-z0-9]+/g,'-');
+  return `<section class="menu-category" id="${anchor}"><div class="eyebrow">Hello Food favourites</div><h2>${esc(cat)} <span>·</span> Menu</h2></section><div class="menu-grid">${items.map(({m,id})=>{
+    const opts=m[3]?Object.entries(m[3]).map(([k,v])=>`<option value="${k}">${k} · ₹${v}</option>`).join(''):'<option>Price to confirm</option>';
+    return `<article class="item"><div class="itemtop"><div><div class="category">${esc(m[1])}</div><h3>${esc(m[0])}</h3></div><div class="price">${priceLabel(m[3])}</div></div><p class="desc">${esc(m[2])}</p><div class="buyrow"><select id="opt${id}" ${m[3]?'':'disabled'}>${opts}</select><button class="add" ${m[3]?'':'disabled title="Price needs confirmation"'} onclick="addToCart(${id})">Add +</button></div></article>`;
+  }).join('')}</div>`;
+ }).join('');
+ document.getElementById('menuNav').innerHTML=categories.map(cat=>`<a href="#${cat.toLowerCase().replace(/[^a-z0-9]+/g,'-')}">${esc(cat)}</a>`).join('');
+}
+function addToCart(id){let m=menu[id],sel=document.getElementById('opt'+id).value,price=m[3][sel],key=id+'-'+sel,found=cart.find(x=>x.key===key);if(found)found.qty++;else cart.push({key,id,name:m[0],size:sel,price,qty:1});updateCart()}
+function updateCart(){document.getElementById('cartCount').textContent=cart.reduce((s,x)=>s+x.qty,0);document.getElementById('cartItems').innerHTML=cart.length?cart.map(x=>`<div class="cartline"><div><b>${esc(x.name)}</b><small>${esc(x.size)} · ₹${x.price} each</small><small>₹${x.price*x.qty}</small></div><div class="qty"><button onclick="changeQty('${x.key}',-1)">−</button><b>${x.qty}</b><button onclick="changeQty('${x.key}',1)">+</button></div></div>`).join(''):'<div class="empty">Your cart is empty.<br><br>Pick something delicious from the menu 🍕</div>';document.getElementById('cartTotal').textContent='₹'+cart.reduce((s,x)=>s+x.price*x.qty,0)}
+function changeQty(key,n){let x=cart.find(i=>i.key===key);if(x){x.qty+=n;if(x.qty<=0)cart=cart.filter(i=>i!==x)}updateCart()}
+function toggleCart(open){document.getElementById('cartPanel').classList.toggle('open',open)}
+function checkout(){if(!cart.length){alert('Your cart is empty. Add an item first!');return}let lines=cart.map(x=>`${x.name} (${x.size}) x${x.qty} = ₹${x.price*x.qty}`).join('\n');let total=cart.reduce((s,x)=>s+x.price*x.qty,0);let msg=`Hello Food Mansa! I'd like to enquire/place this order:\n\n${lines}\n\nTotal: ₹${total}\n\nPlease confirm availability, final bill and delivery/pickup details.`;window.open('https://wa.me/917529090486?text='+encodeURIComponent(msg),'_blank')}
+renderMenu();updateCart();
+</script></body></html>
